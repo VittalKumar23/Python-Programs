@@ -1,31 +1,3 @@
-####################################################################################
-## PROBLEM1: Gradient Descent
-## Gradient descent is a popular optimization technique to solve many
-## machine learning problems. In this case, we will explore the gradient
-## descent algorithm to fit a line for the given set of 2-D points.
-## ref: https://tinyurl.com/yc4jbjzs
-## ref: https://spin.atomicobject.com/2014/06/24/gradient-descent-linear-regression/
-##
-##
-## input: directory of faces in ./data/1_points.csv/
-## function for reading points is provided
-##
-##
-## your task: fill the following functions:
-## evaluate_cost
-## evaluate_gradient
-## udpate_params
-## NOTE: do NOT change values of 'init_params' and 'max_iterations' in optimizer
-##
-##
-## output: cost after convergence (rmse, lower the better)
-##
-##
-## NOTE: all required modules are imported. DO NOT import new modules.
-## NOTE: references are given intline
-## tested on Ubuntu14.04, 22Oct2017, Abhilash Srikantha
-####################################################################################
-
 import numpy as np
 import matplotlib.pyplot as plt
 import time
