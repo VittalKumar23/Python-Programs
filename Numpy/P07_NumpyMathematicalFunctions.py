@@ -1,30 +1,36 @@
-# Author: OMKAR PATHAK
-
 import numpy as np
 
 angles = np.array([0, 30, 45, 60, 90, 180, 360])
 
-# Convert to radians by multiplying with pi/180
-# for getting sine of angles
-print(np.sin(angles * np.pi/180))
+# Convert to radians and compute sine, cosine, and tangent
+radians = np.radians(angles)
+sine = np.sin(radians)
+cosine = np.cos(radians)
+tangent = np.tan(radians)
 
-# for getting cosine of angles
-print(np.cos(angles * np.pi/180))
+print("Sine:", sine)
+print("Cosine:", cosine)
+print("Tangent:", tangent)
 
-# for getting tangent of angles
-print(np.tan(angles * np.pi/180))
-
-# for computing inverse of trigonometric functions
-sine = np.sin(angles * np.pi/180)
+# Compute inverse sine and convert to degrees
 sineinv = np.arcsin(sine)
-# computing angle from inverse
-print(np.degrees(sineinv))
+degrees = np.degrees(sineinv)
 
-# for rounding the values
-print(np.around(sine, 4))       # [ 0.      0.5     0.7071  0.866   1.      0.     -0.    ]
+print("Inverse Sine (radians):", sineinv)
+print("Inverse Sine (degrees):", degrees)
 
-# for rounding to previous integer
-print(np.floor(sine))           # [ 0.  0.  0.  0.  1.  0. -1.]
+# Round the sine values to 4 decimal places
+rounded_sine = np.round(sine, 4)
 
-# for rounding to next integer
-print(np.ceil(sine))            # [ 0.  1.  1.  1.  1.  1. -0.]
+print("Rounded Sine:", rounded_sine)
+
+# Round to the previous integer using floor
+rounded_floor = np.floor(sine)
+
+print("Rounded to Previous Integer:", rounded_floor)
+
+# Round to the next integer using ceil
+rounded_ceil = np.ceil(sine)
+
+print("Rounded to Next Integer:", rounded_ceil)
+
